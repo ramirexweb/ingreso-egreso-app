@@ -4,6 +4,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { dashboarRoutes } from './dashboard/dashboard.route';
+
 const routes: Routes = [
   {
     path: 'login',
@@ -16,7 +18,8 @@ const routes: Routes = [
   {
 
     path: '',
-    component: DashboardComponent
+    component: DashboardComponent,
+    children: dashboarRoutes
   },
   {
     path: '**',

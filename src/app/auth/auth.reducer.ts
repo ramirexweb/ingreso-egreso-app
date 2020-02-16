@@ -10,7 +10,7 @@ const estadoInicial: AuthState = {
   user: null
 };
 
-export function authReducer( state = estadoInicial, actions: fromAuth.acciones) : AuthState {
+export function authReducer( state = estadoInicial, actions: fromAuth.acciones): AuthState {
   switch ( actions.type) {
 
     case fromAuth.SET_USER:

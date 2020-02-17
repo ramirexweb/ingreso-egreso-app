@@ -9,7 +9,7 @@ export class IngrersoEgreso {
     this.description = obj && obj.description || null;
     this.monto       = obj && obj.monto       || null;
     this.tipo        = obj && obj.tipo        || null;
-    this.uid         = obj && obj.uid         || null;
+    // this.uid         = obj && obj.uid         || null;
   }
 }
 

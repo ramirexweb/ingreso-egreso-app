@@ -19,6 +19,7 @@ import { Subscription } from 'rxjs';
 export class AuthService {
 
   private userSubscription: Subscription = new Subscription();
+  private ususario: User;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -36,8 +37,10 @@ export class AuthService {
           .subscribe( (usuarioObj: any) => {
             const newUser = new User( usuarioObj);
             this.store.dispatch( new SetUserAction( newUser));
+            this.ususario = newUser;
           });
       } else {
+        this.ususario = null;
         this.userSubscription.unsubscribe();
       }
     });
@@ -96,5 +99,9 @@ export class AuthService {
   logout() {
     this.router.navigate(['/login']);
     this.afAuth.auth.signOut();
+  }
+
+  getUsuario() {
+    return { ...this.ususario};
   }
 }

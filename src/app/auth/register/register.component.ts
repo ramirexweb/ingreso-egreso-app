@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class RegisterComponent implements OnInit, OnDestroy {
 
-  subscription: Subscription;
+  subscription: Subscription = new Subscription();
 
   cargando: boolean;
 

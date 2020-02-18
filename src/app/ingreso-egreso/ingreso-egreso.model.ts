@@ -1,4 +1,4 @@
-export class IngrersoEgreso {
+export class IngresoEgreso {
   description: string;
   monto: number;
   tipo: string;

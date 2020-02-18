@@ -9,6 +9,7 @@ import { EstadisticaComponent } from './estadistica/estadistica.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { OrdenIngresoEgresoPipe } from './orden-ingreso-egreso.pipe';
 import { SharedModule } from '../shared/shared.module';
+import { DashboardRoutingModule } from '../dashboard/dashboard-routing.module';
 
 
 
@@ -24,7 +25,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     ReactiveFormsModule,
     SharedModule,
-    ChartsModule
+    ChartsModule,
+    DashboardRoutingModule
   ]
 })
 export class IngresoEgresoModule { }

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 // Modulos personalizados
 import { AuthModule } from './auth/auth.module';
-import { IngresoEgresoModule } from './ingreso-egreso/ingreso-egreso.module';
+// import { IngresoEgresoModule } from './ingreso-egreso/ingreso-egreso.module';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -22,7 +22,7 @@ import { appReducers } from './app.reducer';
   imports: [
     BrowserModule,
     AuthModule,
-    IngresoEgresoModule,
+    // IngresoEgresoModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
